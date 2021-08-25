@@ -7,7 +7,7 @@ let colorChosen = '#8E8B82';
 const grid = document.querySelector('#grid');
 
 function fillGrid(size) {
-    const gridLength = grid.offsetWidth;
+    const gridLength = 420;
     const unitLength = +(gridLength) / size;
 
     grid.style.cssText = `grid-template-columns: repeat(${size}, ${unitLength}px); \
@@ -17,6 +17,7 @@ function fillGrid(size) {
     for (let i = 0; i < total; i++) {
         const div = document.createElement('div');
         div.classList.add('unit');
+        div.setAttribute("style", `width: ${unitLength}px; height: ${unitLength}px`);
         div.style.width = unitLength;
         div.style.height = unitLength;
         grid.appendChild(div);
