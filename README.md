@@ -1,1 +1,1 @@
-# Etch-A-Sketch
+This is the Etch-A-Sketch mini-project.

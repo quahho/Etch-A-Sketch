@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Etch-A-Sketch</title>
+        <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div id="main-container">
+            <header>
+                <h1>Etch-A-Sketch</h1>
+            </header>
+            <main>
+                <section id="grid"></section>
+                <section id="modifier">
+                    <input type="color" value="#8E8B82" id="picker">
+                    <div id="rectangles">
+                        <input type="button" value="Draw" id="draw" class="button">
+                        <input type="button" value="Erase" id="erase" class="button">
+                        <input type="button" value="Clear" id="clear" class="button">
+                    </div>
+                    <div>
+                        <div id="label"> 
+                            <span id="pick" class="size">16</span> x 
+                            <span class="size">16</span>
+                        </div>
+                        <div class="hash">
+                            <i class="material-icons">tag</i>
+                        </div>
+                        <input type="range" min="8" max="64" value="16" step="8" id="slider">
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
