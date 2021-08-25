@@ -8,7 +8,7 @@ const grid = document.querySelector('#grid');
 
 function fillGrid(size) {
     const gridLength = 420;
-    const unitLength = +(gridLength) / size;
+    const unitLength = gridLength / size;
 
     grid.style.cssText = `grid-template-columns: repeat(${size}, ${unitLength}px); \
                             grid-template-rows: repeat(${size}, ${unitLength}px)`;
