@@ -7,20 +7,18 @@ let colorChosen = '#8E8B82';
 const grid = document.querySelector('#grid');
 
 function fillGrid(size) {
-    const gridWidth = grid.offsetWidth;
-    const unitWidth = +(gridWidth) / size;
-    const gridHeight = grid.offsetHeight;
-    const unitHeight = +(gridHeight) / size;
+    const gridLength = grid.offsetWidth;
+    const unitLength = +(gridLength) / size;
 
-    grid.style.cssText = `grid-template-columns: repeat(${size}, ${unitWidth}px); \
-                            grid-template-rows: repeat(${size}, ${unitHeight}px)`;
+    grid.style.cssText = `grid-template-columns: repeat(${size}, ${unitLength}px); \
+                            grid-template-rows: repeat(${size}, ${unitLength}px)`;
 
     const total = size * size;
     for (let i = 0; i < total; i++) {
         const div = document.createElement('div');
         div.classList.add('unit');
-        div.style.width = unitWidth;
-        div.style.height = unitHeight;
+        div.style.width = unitLength;
+        div.style.height = unitLength;
         grid.appendChild(div);
     }
 
